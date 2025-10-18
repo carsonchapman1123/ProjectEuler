@@ -1,10 +1,14 @@
 import math
 
+
 def nth_fibonacci(n: int) -> int:
     """
     Returns the nth fibonacci number.
     """
-    return int((((1 + math.sqrt(5)) / 2)**n - ((1 - math.sqrt(5)) / 2)**n) / math.sqrt(5))
+    return int(
+        (((1 + math.sqrt(5)) / 2) ** n - ((1 - math.sqrt(5)) / 2) ** n) / math.sqrt(5)
+    )
+
 
 def sum_even_fibonacci(n: int) -> int:
     """
@@ -21,5 +25,6 @@ def sum_even_fibonacci(n: int) -> int:
         curr_num += 3
         curr_fib = nth_fibonacci(curr_num)
     return s
+
 
 print(sum_even_fibonacci(3999999))
